@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.MainPage">
 
-    <ScrollView>
+    <ScrollView BackgroundColor="#D4EBF2">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.1*"></RowDefinition>
@@ -15,6 +15,10 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <Label Text="SHOPPING LIST"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   HeightRequest="50"></Label>
             <Entry Grid.Row="0" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="1" 
@@ -27,7 +31,8 @@
                 Grid.Row="0" 
                 Grid.Column="2" 
                 Text="Add item"
-                MaximumHeightRequest="50"></Button>
+                MaximumHeightRequest="50"
+                BackgroundColor="#1C4E5C"></Button>
             <CollectionView ItemsSource="{Binding Products}" 
                             Grid.Row="1" 
                             Grid.ColumnSpan="3"
@@ -46,7 +51,8 @@
                     Grid.Column="1" 
                     MaximumHeightRequest="50" 
                     Text="Delete item"
-                    Clicked="DelButton_Clicked"></Button>
+                    Clicked="DelButton_Clicked"
+                    BackgroundColor="#1C4E5C"></Button>
         </Grid>
     </ScrollView>
 

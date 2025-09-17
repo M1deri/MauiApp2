@@ -20,13 +20,14 @@ namespace MauiApp2
             if (string.IsNullOrEmpty(nazwa))
                 return;
             AddItem.Text = "";
-            var existing = Products.FirstOrDefault(p => p.Name.Equals(nazwa, StringComparison.OrdinalIgnoreCase));
 
-            if (existing != null)
+            var JuzDodany = Products.FirstOrDefault(p => p.Name.Equals(nazwa, StringComparison.OrdinalIgnoreCase));
+
+            if (JuzDodany != null)
             {
-                existing.Quantity++;
-                Products.Remove(existing);
-                Products.Add(existing);
+                JuzDodany.Quantity++;
+                Products.Remove(JuzDodany);
+                Products.Add(JuzDodany);
             }
             else
             {
