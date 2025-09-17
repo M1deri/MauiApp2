@@ -1,3 +1,4 @@
+using Microsoft.Maui.Controls;
 using System.Collections.ObjectModel;
 
 namespace MauiApp2
@@ -13,6 +14,32 @@ namespace MauiApp2
             BindingContext = this;
         }
 
-        
+        private void AddButton_Clicked(object sender, EventArgs e)
+        {
+            string nazwa = AddItem.Text;
+            if (string.IsNullOrEmpty(nazwa))
+                return;
+            AddItem.Text = "";
+            var existing = Products.FirstOrDefault(p => p.Name.Equals(nazwa, StringComparison.OrdinalIgnoreCase));
+
+            if (existing != null)
+            {
+                existing.Quantity++;
+                Products.Remove(existing);
+                Products.Add(existing);
+            }
+            else
+            {
+                Products.Add(new Item { Name = nazwa, Quantity = 1 });
+            }
+
+            wyswietl.ItemsSource = Products;
+        }
+
+        private void DelButton_Clicked(object sender, EventArgs e)
+        {
+            var selected = wyswietl.SelectedItem;
+            Products.Remove((Item)selected);
+        }
     }
 }

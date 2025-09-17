@@ -9,6 +9,6 @@ namespace MauiApp2
     internal class Item
     {
         public string? Name { get; set; }
-        public string? Quantity { get; set; }
+        public int Quantity { get; set; }
     }
 }
