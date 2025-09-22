@@ -18,26 +18,26 @@
             <Label Text="SHOPPING LIST"
                    Grid.Row="0"
                    Grid.Column="1"
-                   HeightRequest="50"></Label>
+                   Style="{StaticResource labelStyle}"></Label>
             <Entry Grid.Row="0" 
                    Grid.Column="0" 
                    Grid.ColumnSpan="1" 
                    Placeholder="Input item"
-                   MaximumHeightRequest="60"
                    x:Name="AddItem"
+                   Style="{StaticResource entryStyle}"
             ></Entry>
             <Button 
                 Clicked="AddButton_Clicked"
                 Grid.Row="0" 
                 Grid.Column="2" 
                 Text="Add item"
-                MaximumHeightRequest="50"
-                BackgroundColor="#1C4E5C"></Button>
+                Style="{StaticResource buttonStyle}"></Button>
             <CollectionView ItemsSource="{Binding Products}" 
                             Grid.Row="1" 
                             Grid.ColumnSpan="3"
                             x:Name="wyswietl"
-                            SelectionMode="Single">
+                            SelectionMode="Single"
+                            Style="{StaticResource collViewStyle}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid ColumnDefinitions="*,*" Padding="10">
@@ -49,10 +49,9 @@
             </CollectionView>
             <Button Grid.Row="2" 
                     Grid.Column="1" 
-                    MaximumHeightRequest="50" 
                     Text="Delete item"
                     Clicked="DelButton_Clicked"
-                    BackgroundColor="#1C4E5C"></Button>
+                    Style="{StaticResource buttonStyle}"></Button>
         </Grid>
     </ScrollView>
 

@@ -9,6 +9,33 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="buttonStyle"
+                   TargetType="Button">
+                <Setter Property="MaximumHeightRequest" Value="50" />
+                <Setter Property="BackgroundColor" Value="#EF7C8E" />
+                <Setter Property="CornerRadius" Value="10" />
+            </Style>
+            <Style x:Key="scrollViewStyle"
+                   TargetType="ScrollView">
+                <Setter Property="BackgroundColor" Value="#FAE8E0" />
+            </Style>
+            <Style x:Key="collViewStyle"
+                   TargetType="CollectionView">
+                <Setter Property="BackgroundColor" Value="#D8A7B1"/>
+            </Style>
+            <Style x:Key="entryStyle"
+                   TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="#B6E2D3"/>
+                <Setter Property="MaximumHeightRequest" Value="60"/>
+                <Setter Property="TextColor" Value="Black"/>
+            </Style>
+            <Style x:Key="labelStyle"
+                   TargetType="Label">
+                <Setter Property="Margin" Value="10"/>
+                <Setter Property="BackgroundColor" Value="#B6E2D3"/>
+                <Setter Property="HeightRequest" Value="50"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
